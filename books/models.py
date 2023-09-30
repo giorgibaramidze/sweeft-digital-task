@@ -35,5 +35,8 @@ class Book(models.Model):
     class Meta:
         db_table = "book"
     
+    def author_full_name(self):
+        return f'{self.author.first_name} {self.author.last_name}'
+    
     def __str__(self):
         return self.title
