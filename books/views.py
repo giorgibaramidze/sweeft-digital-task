@@ -5,7 +5,6 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser
 from .permissions import IsAuthorOrReadOnly
 
 
-
 class BooksList(generics.ListCreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
